@@ -21,7 +21,7 @@
         { 
             ?>
             <script>
-                alert("Cet email est deja utilisé pr un utilisateur");
+                alert("Ce mail est deja utilisé pr un utilisateur");
             </script>
             <?php
         }
