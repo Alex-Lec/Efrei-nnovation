@@ -21,6 +21,6 @@
         }
         else
         {
-            header('Location:../vues/inscription.php');
+            header('Location:../vues/inscription.html');
         }
     }
