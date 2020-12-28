@@ -21,7 +21,7 @@
         { 
             ?>
             <script>
-                alert("Ce mail est deja utilisé pr un utilisateur");
+                alert("Ce mail est deja utilisé par un utilisateur");
             </script>
             <?php
         }
@@ -36,7 +36,6 @@
     $coBd = new bd("efreinnovation");
     $co = $coBd->connexion();
     $m = new utilisateur($co,$login,$mdp,$nom,$prenom,$statut);
-    }
     header('Location:../Vues/connexion.html');
 ?>
 

@@ -17,7 +17,7 @@
         {
             $m=new utilisateur($co,$login,$mdp);
             $m->connexion();
-            header('Location:../vues/index.html');
+            header('Location:../vues/index.php');
         }
         else
         {

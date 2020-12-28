@@ -14,5 +14,5 @@
       }
     $m=new utilisateur($co,$loginCo,$mdp);
     $m->deconnexion();
-    header('Location:../Vues/index.html');
+    header('Location:../Vues/index.php');
 ?>
