@@ -65,7 +65,10 @@
     </nav>
 
     <main class="container">
-
+        <?php
+            $numUtilisateurCo = isset($_SESSION["numUtilisateur"]) ? $_SESSION["numUtilisateur"] : NULL ;
+        ?>
+        <h1 id="titreCompte">Voici les informations de votre compte</h1>
     </main>
 
 </body>
