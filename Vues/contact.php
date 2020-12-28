@@ -19,7 +19,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
 
     <link rel="stylesheet" href="style.css">
-    
+
     <title>Efrei'nnovation</title>
 </head>
 
@@ -43,11 +43,10 @@
                     <a id="navigation" class="nav-link" href="contact.php">Contacts</a>
                 </li>
                 <li class="nav-item"></li>
-                    <a id="navigation" class="nav-link" href="compte.php">Mon compte</a>
+                <a id="navigation" class="nav-link" href="compte.php">Mon compte</a>
                 </li>
             </ul>
             <?php
-                
                 $coBd = new bd("bdémocratie");
                 $co = $coBd->connexion();
                 $numUtilisateurCo = isset($_SESSION["numUtilisateur"]) ? $_SESSION["numUtilisateur"] : NULL ;
@@ -66,46 +65,18 @@
         </div>
     </nav>
 
-    <div class="container text-center mt-5">
-        <p id="innovSemaine">Innovations de la semaine</p>
-    
-        <div class="row row-cols-3 mt-5 pt-5">
-            <div class="col-4 mb-4">
-                <div class="card .h-100">
-                    <img class="card-img-top" src="images/image-test.png" alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title">Innovation 1</h5>
-                        <p class="card-text">Courte description de l'innovation</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-4 mb-4">
-                <div class="card .h-100">
-                    <img class="card-img-top" src="images/image-test.png" alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title">Innovation 2</h5>
-                        <p class="card-text">Courte description de l'innovation</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-4 mb-4">
-                <div class="card .h-100">
-                    <img class="card-img-top" src="images/image-test.png" alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title">Innovation 3</h5>
-                        <p class="card-text">Courte description de l'innovation</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    <main class="container">
 
+    </main>
+ 
 </body>
 <footer class="page-footer font-small fixed-bottom">
     <div class="text-center py-3">
-        <span id="footer">Site créé par Ancelet Paul, El Baied Sami, Guitton Georges, Lécuyer Alexis et Oubenami Nour-Eddine.</span>
+        <span id="footer">Site créé par Ancelet Paul, El Baied Sami, Guitton Georges, Lécuyer Alexis et Oubenami
+            Nour-Eddine.</span>
     </div>
 </footer>
+
 
 
 
