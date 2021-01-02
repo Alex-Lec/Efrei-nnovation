@@ -65,26 +65,27 @@
         </div>
     </nav>
     <main class="container">
-    <form>
+
         <h2>Bienvenue sur Efrei'nnovation</h2>
         <img src="images/logo.png">
+
         <p>Content du site, besoin d'une réponse à vos questions, réclamations sur nos services ?
             <strong>Vous êtes au bon endroit !</strong>
             Ici vous pouvez écrire un message qui sera envoyé aux équipes du site en remplissant ce simple formulaire.
         </p>
-        </div>
+
+        <form method="post" action="../controleurs/envoi_mail.php">
         <div>
-            <label for="email">Objet : </label>
-            <input type="text" name="objet" placeholder="Objet du mail" size="50" id="objet" required>
+        <label for="email">Objet : </label>
+        <input type="text" name="objet" placeholder="Objet du mail" size="50" id="objet" required>
         </div>
-        <textarea type="text" placeholder="Votre mail ici" rows="20" cols="100" id="corps" required>
+        <textarea type="text" name="corps" placeholder="Votre mail ici" rows="20" cols="100" id="corps" required>
         </textarea>
         <br>
         <button class="btn btn-primary" id="envoyer-form" type="submit">Envoyer</button>
     </form>
 
     </main>
- 
 </body>
 <footer class="page-footer font-small position-sticky">
     <div class="text-center py-3">
