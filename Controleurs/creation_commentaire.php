@@ -4,7 +4,7 @@
   require_once('../modeles/innovation.php');
   session_start();
 
-    $numMembreCo=$_SESSION["numMembre"];
+    $numUtilisateurCo=$_SESSION["numUtilisateur"];
     $txtCommentaire=$_POST["txtCommentaire"];
     $date = date('Y-m-d');
     
