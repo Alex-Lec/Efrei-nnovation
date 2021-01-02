@@ -77,6 +77,7 @@
                 $titre=$donnees["titre"];
                 $image=$donnees["image"];
                 $descriptionCourte=$donnees["descriptionCourte"];
+                $fini=$donnees["fini"];
             ?>
                 <div class="card-deck" id="innovations">
                     <div class="card mb-4">
@@ -88,6 +89,7 @@
                                 <input type="hidden" name="numInnovationSelect" value="<?php echo $idInnovation;?>">
                                 <input type="submit" class="btn btn-primary" value="Consulter">
                             </form>
+                            <p class="card-text"><?php if($fini==0){echo 'Projet en cours !';}else{echo 'Projet fini !';} ?></p>
                         </div>
                     </div>
                 </div>
