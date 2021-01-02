@@ -64,7 +64,7 @@
             <a href="<?php echo $buttonHeading ?>"><button type="button" class="btn" id="connecter"><?php echo $buttonName ?></button></a>
         </div>
     </nav>
-    <main class="container">
+    <main class="container text-center">
 
         <h2>Bienvenue sur Efrei'nnovation</h2>
         <img src="images/logo.png">
@@ -79,12 +79,11 @@
         <label for="email">Objet : </label>
         <input type="text" name="objet" placeholder="Objet du mail" size="50" id="objet" required>
         </div>
-        <textarea type="text" name="corps" placeholder="Votre mail ici" rows="20" cols="100" id="corps" required>
-        </textarea>
+        <textarea type="text" name="corps" placeholder="Votre mail ici" rows="20" cols="100" id="corps" required></textarea>
         <br>
         <button class="btn btn-primary" id="envoyer-form" type="submit">Envoyer</button>
     </form>
-
+    <br>
     </main>
 </body>
 <footer class="page-footer font-small position-sticky">

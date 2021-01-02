@@ -65,12 +65,14 @@
         </div>
     </nav>
 
-    <main class="container">
+    <main class="container ">
         <?php
         if($numUtilisateurCo!=NULL)
         {
         ?>
-            <button class="btn btn-primary" onclick="window.location.href='formulaire_innovation.php';">Créer une innovation</button>
+            <div class="text-center">
+                <button id="btn-innov" class="btn btn-primary" onclick="window.location.href='formulaire_innovation.php';">Créer une innovation</button>
+            </div>
         <?php
         }
         ?>

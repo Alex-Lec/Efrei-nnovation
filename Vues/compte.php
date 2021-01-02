@@ -64,7 +64,7 @@
             <a href="<?php echo $buttonHeading ?>"><button type="button" class="btn" id="connecter"><?php echo $buttonName ?></button></a>        </div>
     </nav>
 
-    <main class="container">
+    <main class="container text-center">
         <?php
             $numUtilisateurCo = isset($_SESSION["numUtilisateur"]) ? $_SESSION["numUtilisateur"] : NULL ;
         ?>
