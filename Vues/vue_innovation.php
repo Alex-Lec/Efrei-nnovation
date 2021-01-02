@@ -87,7 +87,7 @@
         $prenom=$donnees["prenom"];
     }
 ?>
-      <h2><?php echo $titre;?></h2>
+      <h1><?php echo $titre;?></h1>
       <p>Créée par : <?php echo $prenom; echo ' ';echo $nom; ?></p>
       <img src=<?php echo $image;?>>
       <p><?php echo $descriptionCourte;?></p>
@@ -96,6 +96,39 @@
 
       <a href="../controleurs/vote.php"><button type="button" name="vote" class="btn btn-outline-primary"><img src="images/pouce_vert.jpg" width=15px></button></a>
       <a href="../controleurs/annuler_vote.php"><button type="button" name="annuler" class="btn btn-outline-primary">Annuler mon vote</button></a>
+
+      <h3>Commentaires</h3>
+
+          <form method="post" action="../controleurs/creation_commentaire.php">
+            <TEXTAREA name="txtCommentaire" rows=1 cols=70 placeholder="Entrez ici un commentaire pour cette innovation" required></TEXTAREA>
+            <br/>
+            <input type="submit" class="btn btn-outline-primary" value="Publier ce commentaire"/>
+          </form>
+
+      <?php
+      $result3=mysqli_query($co,"SELECT * FROM commentaire WHERE innovation='$numInnovation'") or die("Erreur requete 10");
+      while($donnees = mysqli_fetch_assoc($result3))
+      {
+        $numCommentaire=$donnees["idCommentaire"];
+        $txtCommentaire=$donnees["texte"];
+        $date=$donnees["date"];
+
+        $result4=mysqli_query($co,"SELECT nom,prenom FROM commentaire,utilisateur WHERE commentaire.createur=utilisateur.numUtilisateur AND innovation='$numInnovation' AND idCommentaire='$numCommentaire'") or die("Erreur requete 11");
+
+        ?>
+        <div class="card-deck" id="innovations">
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h5 class="card-title"><?php echo $prenom ,"  ",$nom; ?></h5>
+                    <p class="card-text"><?php echo $txtCommentaire ?></p>
+                    <p class="card-text"><?php echo $date ?></p>
+                </div>
+            </div>
+        </div>
+    <?php
+      }
+    ?>
+
 </main>
 </body>
 <footer class="page-footer font-small postion-sticky">

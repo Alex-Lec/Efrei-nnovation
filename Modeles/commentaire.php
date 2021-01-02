@@ -10,9 +10,9 @@ var $numInnovation;
 public function __construct($co,$txtCommentaire,$dateCommentaire)
 {       
     $numUtilisateurCo=$_SESSION["numUtilisateur"];
-    $numInnovSelect=$_SESSION["numInnovSelect"];
+    $numInnovationSelect=$_SESSION["numInnovationSelect"];
 
-    mysqli_query($co,"INSERT INTO commentaire VALUES ('','$txtCommentaire', '$dateCommentaire','$numUtilisateurCo','$numInnovSelect')") or die("Erreur d'insertion");
+    mysqli_query($co,"INSERT INTO commentaire VALUES ('','$txtCommentaire', '$dateCommentaire','$numUtilisateurCo','$numInnovationSelect')") or die("Erreur d'insertion");
     $this->co=$co;
     $this->idCommentaire=mysqli_insert_id($co); //Recupérer la valeur de id (auto increment)
     $this->txtCommentaire=$txtCommentaire;
