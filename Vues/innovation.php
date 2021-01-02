@@ -73,6 +73,7 @@
             $result=mysqli_query($co,"SELECT * FROM innovation") or die("Erreur requete");
             while($donnees = mysqli_fetch_assoc($result))
             {
+                $idInnovation=$donnees["idInnovation"];
                 $titre=$donnees["titre"];
                 $image=$donnees["image"];
                 $descriptionCourte=$donnees["descriptionCourte"];
@@ -83,7 +84,10 @@
                         <div class="card-body">
                             <h5 class="card-title"><?php echo $titre ?></h5>
                             <p class="card-text"><?php echo $descriptionCourte ?></p>
-                            <button class="btn btn-primary" onclick="window.location.href='vue_innovation.php'">Consulter</button>
+                            <form method="post" action="../Controleurs/session_innovation.php">
+                                <input type="hidden" name="numInnovationSelect" value="<?php echo $idInnovation;?>">
+                                <input type="submit" class="btn btn-primary" value="Consulter">
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -99,8 +103,5 @@
             Nour-Eddine.</span>
     </div>
 </footer>
-
-
-
 
 </html>

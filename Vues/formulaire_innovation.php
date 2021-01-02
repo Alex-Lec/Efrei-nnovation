@@ -77,4 +77,10 @@
         </main>
     </div>
   </body>
+<footer class="page-footer font-small postion-sticky">
+    <div class="text-center py-3">
+        <span id="footer">Site créé par Ancelet Paul, El Baied Sami, Guitton Georges, Lécuyer Alexis et Oubenami
+            Nour-Eddine.</span>
+    </div>
+</footer>
 </html>
