@@ -16,11 +16,7 @@
       }
       if($nb==0)
       {
-        mysqli_query($co,"INSERT INTO avis VALUES ('$numPropSelect','$numUtilisateurCo',1)") or die("Erreur d'insertion");
-      }
-      else
-      {
-        mysqli_query($co,"UPDATE avis SET vote=1 WHERE numProposition='$numPropSelect' AND utilisateur='$numUtilisateurCo'") or die("Erreur d'update");
+        mysqli_query($co,"INSERT INTO vote VALUES ('$numUtilisateurCo','$numInnovationSelect')") or die("Erreur d'insertion");
       }
       header('Location:../vues/vue_innovation.php');
 ?>

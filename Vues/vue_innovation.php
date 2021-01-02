@@ -94,6 +94,8 @@
       <p><?php echo $descriptionLongue;?></p>
       <p>Modifié pour la dernière fois le : <?php echo $dateModification;?></p>
 
+      <a href="../controleurs/vote.php"><button type="button" name="vote" class="btn btn-outline-primary"><img src="images/pouce_vert.jpg" width=15px></button></a>
+      <a href="../controleurs/annuler_vote.php"><button type="button" name="annuler" class="btn btn-outline-primary">Annuler mon vote</button></a>
 </main>
 </body>
 <footer class="page-footer font-small postion-sticky">
