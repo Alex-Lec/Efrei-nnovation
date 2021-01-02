@@ -47,7 +47,7 @@
                 </li>
             </ul>
             <?php
-                $coBd = new bd("bdémocratie");
+                $coBd = new bd("efreinnovation");
                 $co = $coBd->connexion();
                 $numUtilisateurCo = isset($_SESSION["numUtilisateur"]) ? $_SESSION["numUtilisateur"] : NULL ;
                 if(isset($numUtilisateurCo))

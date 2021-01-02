@@ -19,7 +19,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
 
     <link rel="stylesheet" href="style.css">
-    
+
     <title>Efrei'nnovation</title>
 </head>
 
@@ -43,7 +43,7 @@
                     <a id="navigation" class="nav-link" href="contact.php">Contacts</a>
                 </li>
                 <li class="nav-item"></li>
-                    <a id="navigation" class="nav-link" href="compte.php">Mon compte</a>
+                <a id="navigation" class="nav-link" href="compte.php">Mon compte</a>
                 </li>
             </ul>
             <?php
@@ -64,48 +64,17 @@
             <a href="<?php echo $buttonHeading ?>"><button type="button" class="btn" id="connecter"><?php echo $buttonName ?></button></a>
         </div>
     </nav>
-
-    <div class="container text-center mt-5">
-        <p id="innovSemaine">Innovations de la semaine</p>
-    
-        <div class="row row-cols-3 mt-5 pt-5">
-            <div class="col-4 mb-4">
-                <div class="card .h-100">
-                    <img class="card-img-top" src="images/image-test.png" alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title">Innovation 1</h5>
-                        <p class="card-text">Courte description de l'innovation</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-4 mb-4">
-                <div class="card .h-100">
-                    <img class="card-img-top" src="images/image-test.png" alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title">Innovation 2</h5>
-                        <p class="card-text">Courte description de l'innovation</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-4 mb-4">
-                <div class="card .h-100">
-                    <img class="card-img-top" src="images/image-test.png" alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title">Innovation 3</h5>
-                        <p class="card-text">Courte description de l'innovation</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+    </header>
+    <main class="container">
+        <h2>Création d'une innovation</h2>
+        <form method="post" action="../controleurs/creation_innovation.php">
+            <p>Titre de la innovation : <input type="text" name="titre" placeholder="Entrez ici le nom de l'innovation"value=""required/></p>
+            <p>Description courte de l'innovation :<br/><TEXTAREA name="descriptionCourte" rows=3 cols=70 placeholder="Entrez ici la description courte de votre innovation"required></TEXTAREA></p>
+            <p>Description longue de la innovation :<br/><TEXTAREA name="descriptionLongue" rows=10 cols=70 placeholder="Entrez ici la description longue de votre innovation"required></TEXTAREA></p>
+            <br/>
+            <p><input type="submit" class="btn btn-outline-primary" value="Soumettre l'innovation" /></p>
+        </form>
+        </main>
     </div>
-
-</body>
-<footer class="page-footer font-small fixed-bottom">
-    <div class="text-center py-3">
-        <span id="footer">Site créé par Ancelet Paul, El Baied Sami, Guitton Georges, Lécuyer Alexis et Oubenami Nour-Eddine.</span>
-    </div>
-</footer>
-
-
-
+  </body>
 </html>

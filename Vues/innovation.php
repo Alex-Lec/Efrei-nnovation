@@ -47,7 +47,7 @@
                 </li>
             </ul>
             <?php
-                $coBd = new bd("bdémocratie");
+                $coBd = new bd("efreinnovation");
                 $co = $coBd->connexion();
                 $numUtilisateurCo = isset($_SESSION["numUtilisateur"]) ? $_SESSION["numUtilisateur"] : NULL ;
                 if(isset($numUtilisateurCo))
@@ -66,6 +66,9 @@
     </nav>
 
     <main class="container">
+        <p> si l'utilisateur est non connecté, le rediriger vers la connexion pour pouvoir créer une innovation</p>
+        <button class="btn btn-primary" onclick="window.location.href='formulaire_innovation.php';">Créer une innovation</button>
+
         <div class="card-deck" id="innovations">
             <div class="card mb-4">
                 <img class="card-img-top" src="images/image-test.png" alt="Card image cap">
