@@ -77,29 +77,7 @@
                     <p class="card-text">Courte description de l'innovation</p>
                 </div>
             </div>
-            <div class="card mb-4">
-                <img class="card-img-top" src="images/image-test.png" alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">Innovation 2</h5>
-                    <p class="card-text">Courte description de l'innovation</p>
-                </div>
-            </div>
-            <div class="card mb-4">
-                <img class="card-img-top" src="images/image-test.png" alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">Innovation 3</h5>
-                    <p class="card-text">Courte description de l'innovation</p>
-                </div>
-            </div>
-            <div class="card mb-4">
-                <img class="card-img-top" src="images/image-test.png" alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">Innovation 4</h5>
-                    <p class="card-text">Courte description de l'innovation</p>
-                </div>
-            </div>
         </div>
-
     </main>
     
 </body>

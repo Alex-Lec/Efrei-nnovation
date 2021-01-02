@@ -70,8 +70,8 @@
         <form method="post" action="../controleurs/creation_innovation.php">
             <p>Titre de la innovation : <input type="text" name="titre" placeholder="Entrez ici le nom de l'innovation"value=""required/></p>
             <p>Description courte de l'innovation :<br/><TEXTAREA name="descriptionCourte" rows=3 cols=70 placeholder="Entrez ici la description courte de votre innovation"required></TEXTAREA></p>
-            <p>Description longue de la innovation :<br/><TEXTAREA name="descriptionLongue" rows=10 cols=70 placeholder="Entrez ici la description longue de votre innovation"required></TEXTAREA></p>
-            <br/>
+            <p>Description longue de la innovation :<br/><TEXTAREA name="descriptionLongue" rows=10 cols=70 placeholder="Entrez ici la description longue de votre innovation"required></TEXTAREA></p>            <br/>
+            <p>Lien de l'image :<br/><TEXTAREA name="image" rows=1 cols=50 placeholder="Entrez ici le lien de votre image"required></TEXTAREA></p>
             <p><input type="submit" class="btn btn-outline-primary" value="Soumettre l'innovation" /></p>
         </form>
         </main>
