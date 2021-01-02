@@ -68,16 +68,28 @@
     <main class="container">
         <p> si l'utilisateur est non connecté, le rediriger vers la connexion pour pouvoir créer une innovation</p>
         <button class="btn btn-primary" onclick="window.location.href='formulaire_innovation.php';">Créer une innovation</button>
-
-        <div class="card-deck" id="innovations">
-            <div class="card mb-4">
-                <img class="card-img-top" src="images/image-test.png" alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">Innovation 1</h5>
-                    <p class="card-text">Courte description de l'innovation</p>
+        
+        <?php
+            $result=mysqli_query($co,"SELECT * FROM innovation") or die("Erreur requete");
+            while($donnees = mysqli_fetch_assoc($result))
+            {
+                $titre=$donnees["titre"];
+                $image=$donnees["image"];
+                $descriptionCourte=$donnees["descriptionCourte"];
+            ?>
+                <div class="card-deck" id="innovations">
+                    <div class="card mb-4">
+                        <img class="card-img-top" src="<?php echo $image ?>" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title"><?php echo $titre ?></h5>
+                            <p class="card-text"><?php echo $descriptionCourte ?></p>
+                            <button class="btn btn-primary" onclick="window.location.href='vue_innovation.php'">Consulter</button>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
+            <?php
+            }
+            ?>
     </main>
     
 </body>
