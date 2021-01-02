@@ -66,9 +66,15 @@
     </nav>
 
     <main class="container">
-        <p> si l'utilisateur est non connecté, le rediriger vers la connexion pour pouvoir créer une innovation</p>
-        <button class="btn btn-primary" onclick="window.location.href='formulaire_innovation.php';">Créer une innovation</button>
-        
+        <?php
+        if($numUtilisateurCo!=NULL)
+        {
+        ?>
+            <button class="btn btn-primary" onclick="window.location.href='formulaire_innovation.php';">Créer une innovation</button>
+        <?php
+        }
+        ?>
+
         <?php
             $result=mysqli_query($co,"SELECT * FROM innovation") or die("Erreur requete");
             while($donnees = mysqli_fetch_assoc($result))
