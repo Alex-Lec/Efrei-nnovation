@@ -24,7 +24,7 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light mb-4 p-1">
+    <nav class="navbar navbar-expand-lg navbar-light mb-4 p-1 sticky-top">
         <a class="navbar-brand" href="index.php"><img id="logo" src="images/logo.png"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -100,7 +100,7 @@
     </main>
     
 </body>
-<footer class="page-footer font-small fixed-bottom">
+<footer class="page-footer font-small postion-sticky">
     <div class="text-center py-3">
         <span id="footer">Site créé par Ancelet Paul, El Baied Sami, Guitton Georges, Lécuyer Alexis et Oubenami
             Nour-Eddine.</span>

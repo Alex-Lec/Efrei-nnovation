@@ -24,7 +24,7 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light mb-4 p-1">
+    <nav class="navbar navbar-expand-lg navbar-light mb-4 p-1 sticky-top">
         <a class="navbar-brand" href="index.php"><img id="logo" src="images/logo.png"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -64,13 +64,29 @@
             <a href="<?php echo $buttonHeading ?>"><button type="button" class="btn" id="connecter"><?php echo $buttonName ?></button></a>
         </div>
     </nav>
-
     <main class="container">
+    <form>
+        <h2>Bienvenue sur Efrei'nnovation</h2>
+        <img src="images/logo.png">
+        <p>Content du site, besoin d'une réponse à vos questions, réclamations sur nos services ?
+            <strong>Vous êtes au bon endroit !</strong>
+            Ici vous pouvez écrire un message qui sera envoyé aux équipes du site en remplissant ce simple formulaire.
+        </p>
+        </div>
+        <div>
+            <label for="email">Objet : </label>
+            <input type="text" name="objet" placeholder="Objet du mail" size="50" id="objet" required>
+        </div>
+        <textarea type="text" placeholder="Votre mail ici" rows="20" cols="100" id="corps" required>
+        </textarea>
+        <br>
+        <button class="btn btn-primary" id="envoyer-form" type="submit">Envoyer</button>
+    </form>
 
     </main>
  
 </body>
-<footer class="page-footer font-small fixed-bottom">
+<footer class="page-footer font-small position-sticky">
     <div class="text-center py-3">
         <span id="footer">Site créé par Ancelet Paul, El Baied Sami, Guitton Georges, Lécuyer Alexis et Oubenami
             Nour-Eddine.</span>
