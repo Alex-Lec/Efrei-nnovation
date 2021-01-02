@@ -64,3 +64,14 @@ footer {
 h2 {
 	margin-bottom: 20px;
 }
+.card-img-top {
+    width: 100%;
+}
+
+#card-accueil{
+	width : 250px;
+}
+
+#changer-mdp {
+	border:var(--blue) solid;
+}

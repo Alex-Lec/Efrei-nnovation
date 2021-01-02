@@ -60,14 +60,6 @@ function connexion()
     $_SESSION["numUtilisateur"]=$this->numUtilisateur;
 }
 
-function modif_mdepasse($mdp)
-{  
-    $numUtilisateur=$this->numUtilisateur;
-    mysqli_query($co,"UPDATE Utilisateur  SET mdp=$mdp WHERE numUtilisateur=$numUtilisateur")
-    or die("Erreur lors du changement de mot de passe");
-    
-}
-
 function deconnexion()
 {  
     session_destroy();

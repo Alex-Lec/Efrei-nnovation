@@ -67,8 +67,60 @@
     <main class="container text-center">
         <?php
             $numUtilisateurCo = isset($_SESSION["numUtilisateur"]) ? $_SESSION["numUtilisateur"] : NULL ;
+            if(!$numUtilisateurCo)
+            {
+                ?>
+                <h1 id="titreCompte">Vous n'êtes pas connecté !</h1>
+                <?php
+            }
+            else 
+            {
+            $result = mysqli_query($co,"SELECT login,nom,prenom FROM utilisateur WHERE numUtilisateur=$numUtilisateurCo") or die("Erreur de select");
+            while($donnees = mysqli_fetch_assoc($result))
+            {
+                $login=$donnees["login"];
+                $nom=$donnees["nom"];
+                $prenom=$donnees["prenom"];
+            ?>
+                <h1 id="titreCompte">Voici les informations de votre compte</h1>
+                <br>
+                <p>Login : <?php echo $login; ?></p>
+                <p>Prénom : <?php echo $prenom; ?></p>
+                <p>Nom : <?php echo $nom; ?></p>
+                <br>
+            <?php
+            }
+            $result2=mysqli_query($co,"SELECT * FROM innovation WHERE createur=$numUtilisateurCo") or die("Erreur requete");
+            while($donnees = mysqli_fetch_assoc($result2))
+            {
+                $idInnovation=$donnees["idInnovation"];
+                $titre=$donnees["titre"];
+                $image=$donnees["image"];
+                $descriptionCourte=$donnees["descriptionCourte"];
+                $descriptionLongue=$donnees["descriptionLongue"];
+                $fini=$donnees["fini"];
+            ?>
+                <div class="card-deck" id="innovations">
+                    <div class="card mb-4">
+                        <img class="card-img-top" src="<?php echo $image ?>" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title"><?php echo $titre ?></h5>
+                            <p class="card-text"><?php echo $descriptionCourte ?></p>
+                            <form method="post" action="../Vues/formulaire_innovation.php">
+                                <input type="hidden" name="numInnovationSelect" value="<?php echo $idInnovation;?>">
+                                <input type="hidden" name="titre" value="<?php echo $titre;?>">
+                                <input type="hidden" name="descriptionCourte" value="<?php echo $descriptionCourte;?>">
+                                <input type="hidden" name="descriptionLongue" value="<?php echo $descriptionLongue;?>">
+                                <input type="submit" class="btn btn-primary" value="Modifier">
+                            </form>
+                            <p class="card-text"><?php if($fini==0){echo 'Projet en cours !';}else{echo 'Projet fini !';} ?></p>
+                        </div>
+                    </div>
+                </div>
+            <?php
+            }
+        }
         ?>
-        <h1 id="titreCompte">Voici les informations de votre compte</h1>
     </main>
 
 </body>
@@ -78,8 +130,4 @@
             Nour-Eddine.</span>
     </div>
 </footer>
-
-
-
-
 </html>
