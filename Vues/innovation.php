@@ -70,7 +70,7 @@
         if($numUtilisateurCo!=NULL)
         {
         ?>
-            <div class="text-center">
+            <div class="text-center mb-4">
                 <button id="btn-innov" class="btn btn-primary" onclick="window.location.href='formulaire_innovation.php';">Créer une innovation</button>
             </div>
         <?php

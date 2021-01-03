@@ -64,7 +64,7 @@
             <a href="<?php echo $buttonHeading ?>"><button type="button" class="btn" id="connecter"><?php echo $buttonName ?></button></a>        </div>
     </nav>
 
-    <main class="container text-center mb-5">
+    <main class="container mb-5">
         
         <?php
             $numUtilisateurCo = isset($_SESSION["numUtilisateur"]) ? $_SESSION["numUtilisateur"] : NULL ;
@@ -83,7 +83,7 @@
                 $nom=$donnees["nom"];
                 $prenom=$donnees["prenom"];
             ?>
-            <div class="infos-compte">
+            <div class="infos-compte text-center mb-4">
                 <h1 id="titreCompte">Voici les informations de votre compte</h1>
                 <div>Prénom : <strong><?php echo $prenom; ?></strong>, Nom : <strong><?php echo $nom; ?></strong>, Login : <strong><?php echo $login; ?></strong></div>
             </div>
@@ -99,20 +99,29 @@
                 $descriptionLongue=$donnees["descriptionLongue"];
                 $fini=$donnees["fini"];
             ?>
-                <div class="card-deck mt-0" id="innovations">
-                    <div class="card mb-2">
-                        <img class="card-img-top" src="<?php echo $image ?>" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title"><?php echo $titre ?></h5>
-                            <p class="card-text"><?php echo $descriptionCourte ?></p>
-                            <form method="post" action="../Vues/formulaire_innovation.php">
-                                <input type="hidden" name="numInnovationSelect" value="<?php echo $idInnovation;?>">
-                                <input type="hidden" name="titre" value="<?php echo $titre;?>">
-                                <input type="hidden" name="descriptionCourte" value="<?php echo $descriptionCourte;?>">
-                                <input type="hidden" name="descriptionLongue" value="<?php echo $descriptionLongue;?>">
-                                <input type="submit" class="btn btn-primary" value="Modifier">
-                            </form>
-                            <p class="card-text"><?php if($fini==0){echo 'Projet en cours !';}else{echo 'Projet fini !';} ?></p>
+            
+                <div class="card mb-3">
+                    <div class="row g-0">
+                        <div class="col-md-5">
+                            <img src="<?php echo $image ?>" alt="Card img" class="card-img">
+                        </div>
+                        <div class="col-md-5">
+                            <div class="card-body"> 
+                                <h5 class="card-title"><?php echo $titre ?></h5>
+                                <p class="card-text"><?php echo $descriptionCourte ?></p>
+                            </div>
+                        </div>
+                        <div class="col-md-2 align-middle">
+                            <div class="card-body"> 
+                                <form method="post" action="../Vues/formulaire_innovation.php">
+                                    <input type="hidden" name="numInnovationSelect" value="<?php echo $idInnovation;?>">
+                                    <input type="hidden" name="titre" value="<?php echo $titre;?>">
+                                    <input type="hidden" name="descriptionCourte" value="<?php echo $descriptionCourte;?>">
+                                    <input type="hidden" name="descriptionLongue" value="<?php echo $descriptionLongue;?>">
+                                    <input type="submit" class="btn btn-primary" value="Modifier">
+                                </form>
+                                <p class="card-text mt-2"><?php if($fini==0){echo 'Projet en cours !';}else{echo 'Projet fini !';} ?></p>
+                            </div>
                         </div>
                     </div>
                 </div>
