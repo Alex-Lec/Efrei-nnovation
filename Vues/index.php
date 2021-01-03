@@ -65,8 +65,10 @@
         </div>
     </nav>
 
-    <div class="container text-center mt-5">
-        <p id="innovSemaine">Innovations de la semaine</p>
+    <main class="mb-5">
+        <div class="container text-center mt-5">
+        <p id="innovSemaine" class="mb-5">Innovations de la semaine</p>
+        <div class="card-deck">
         <?php
             $result=mysqli_query($co,"SELECT idInnovation, titre, image, descriptionCourte, count(innovation) from vote, innovation WHERE vote.innovation=innovation.idInnovation GROUP BY innovation LIMIT 3") or die("Erreur requete");
             while($donnees = mysqli_fetch_assoc($result))
@@ -76,33 +78,28 @@
                 $image=$donnees["image"];
                 $descriptionCourte=$donnees["descriptionCourte"];
             ?>
-            <div class="d-inline-block">
-                <div>
-                    <div class="card .h-100" id="card-accueil">
-                        <img class="card-img-top embed-responsive embed-responsive-16by9" src="<?php echo $image ?>" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title"><?php echo $titre ?></h5>
-                            <p class="card-text"><?php echo $descriptionCourte ?></p>
-                            <form method="post" action="../Controleurs/session_innovation.php">
-                                <input type="hidden" name="numInnovationSelect" value="<?php echo $idInnovation;?>">
-                                <input type="submit" class="btn btn-primary" value="Consulter">
-                            </form>
-                        </div>
+            
+                <div class="card ml-2 mr-2" id="card-accueil">
+                    <img class="card-img-top" src="<?php echo $image ?>" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title"><?php echo $titre ?></h5>
+                        <p class="card-text"><?php echo $descriptionCourte ?></p>
+                        <form method="post" action="../Controleurs/session_innovation.php">
+                            <input type="hidden" name="numInnovationSelect" value="<?php echo $idInnovation;?>">
+                            <input type="submit" class="btn btn-primary" value="Consulter">
+                        </form>
                     </div>
                 </div>
-            </div>
+  
             <?php
             }
             ?>
-    </div>
+            </div>
+        </div>
+    </main>
 
+<footer class="fixed-bottom text-center">
+      Site créé par Ancelet Paul, El Baied Sami, Guitton Georges, Lécuyer Alexis et Oubenami Nour-Eddine.
+  	</footer>
 </body>
-<footer class="page-footer font-small fixed-bottom">
-    <div class="text-center py-3">
-        <span id="footer">Site créé par Ancelet Paul, El Baied Sami, Guitton Georges, Lécuyer Alexis et Oubenami Nour-Eddine.</span>
-    </div>
-</footer>
-
-
-
 </html>

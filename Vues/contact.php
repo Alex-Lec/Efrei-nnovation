@@ -64,36 +64,29 @@
             <a href="<?php echo $buttonHeading ?>"><button type="button" class="btn" id="connecter"><?php echo $buttonName ?></button></a>
         </div>
     </nav>
-    <main class="container text-center">
+    <main class="container text-center mb-5">
 
         <h2>Bienvenue sur Efrei'nnovation</h2>
         <img src="images/logo.png">
 
         <p>Content du site, besoin d'une réponse à vos questions, réclamations sur nos services ?
-            <strong>Vous êtes au bon endroit !</strong>
+            <strong class="d-block">Vous êtes au bon endroit !</strong>
             Ici vous pouvez écrire un message qui sera envoyé aux équipes du site en remplissant ce simple formulaire.
         </p>
 
         <form method="post" action="../controleurs/envoi_mail.php">
-        <div>
-        <label for="email">Objet : </label>
-        <input type="text" name="objet" placeholder="Objet du mail" size="50" id="objet" required>
+        <div class="form-group">
+            <input class="form-control" type="text" name="objet" placeholder="Objet du mail" size="50" id="objet" required>
         </div>
-        <textarea type="text" name="corps" placeholder="Votre mail ici" rows="20" cols="100" id="corps" required></textarea>
-        <br>
+        <div class="form-group">
+            <textarea class="form-control" type="text" name="corps" placeholder="Votre mail ici" rows="10" cols="100" id="corps" required></textarea>
+        </div>
         <button class="btn btn-primary" id="envoyer-form" type="submit">Envoyer</button>
     </form>
     <br>
     </main>
+    <footer class="fixed-bottom text-center">
+      Site créé par Ancelet Paul, El Baied Sami, Guitton Georges, Lécuyer Alexis et Oubenami Nour-Eddine.
+  	</footer>
 </body>
-<footer class="page-footer font-small position-sticky">
-    <div class="text-center py-3">
-        <span id="footer">Site créé par Ancelet Paul, El Baied Sami, Guitton Georges, Lécuyer Alexis et Oubenami
-            Nour-Eddine.</span>
-    </div>
-</footer>
-
-
-
-
 </html>

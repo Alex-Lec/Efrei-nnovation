@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+:root {
+	--blue: #039be5;
+	--lightGray: #fafafa;
+	--darkGray: #47525e;
+}
+
+* {
+	font-family: "Roboto", sans-serif;
+	color: var(--darkGray);
+}
+
+body {
+	background-color: var(--lightGray);
+}
+
+#logo {
+	width: 30%;
+	margin-right: 0px;
+	background-color: white;
+	border-radius: 100%;
+}
+
+.nav-link {
+	font-size: large;
+}
+
+.navbar {
+	background-color: var(--blue);
+}
+
+#navigation {
+	color: white;
+}
+
+#connecter {
+	color: white;
+	background-color: transparent;
+	border-radius: 30%;
+}
+
+.card-img-top {
+	max-height: 20vh; /*not want to take all vertical space*/
+	object-fit: contain; /*show all image, autosized, no cut, in available space*/
+}
+
+footer {
+	background-color: var(--blue);
+	color: white;
+}
+
+#innovations {
+	display: inline;
+}
+
+#innovSemaine {
+	font-size: xx-large;
+}
+
+h2 {
+	margin-bottom: 20px;
+}
+.card-img-top {
+	width: 100%;
+}
+
+#card-accueil {
+	width: 250px;
+}
+
+#changer-mdp {
+	border: var(--blue) solid;
+}
+
+.img-innov {
+	width: 500px;
+	height: auto;
+}
+
+.form-innovation {
+	width: 600px;
+}
+
+.btn-like:hover {
+	.bi-hand-thumbs-up {
+		fill: white;
+	}
+}
+
+.card-img {
+	max-width: 500px;
+	height: auto;
+}

@@ -64,7 +64,8 @@
             <a href="<?php echo $buttonHeading ?>"><button type="button" class="btn" id="connecter"><?php echo $buttonName ?></button></a>        </div>
     </nav>
 
-    <main class="container text-center">
+    <main class="container text-center mb-5">
+        
         <?php
             $numUtilisateurCo = isset($_SESSION["numUtilisateur"]) ? $_SESSION["numUtilisateur"] : NULL ;
             if(!$numUtilisateurCo)
@@ -82,12 +83,10 @@
                 $nom=$donnees["nom"];
                 $prenom=$donnees["prenom"];
             ?>
+            <div class="infos-compte">
                 <h1 id="titreCompte">Voici les informations de votre compte</h1>
-                <br>
-                <p>Login : <?php echo $login; ?></p>
-                <p>Prénom : <?php echo $prenom; ?></p>
-                <p>Nom : <?php echo $nom; ?></p>
-                <br>
+                <div>Prénom : <strong><?php echo $prenom; ?></strong>, Nom : <strong><?php echo $nom; ?></strong>, Login : <strong><?php echo $login; ?></strong></div>
+            </div>
             <?php
             }
             $result2=mysqli_query($co,"SELECT * FROM innovation WHERE createur=$numUtilisateurCo") or die("Erreur requete");
@@ -100,8 +99,8 @@
                 $descriptionLongue=$donnees["descriptionLongue"];
                 $fini=$donnees["fini"];
             ?>
-                <div class="card-deck" id="innovations">
-                    <div class="card mb-4">
+                <div class="card-deck mt-0" id="innovations">
+                    <div class="card mb-2">
                         <img class="card-img-top" src="<?php echo $image ?>" alt="Card image cap">
                         <div class="card-body">
                             <h5 class="card-title"><?php echo $titre ?></h5>
@@ -122,12 +121,8 @@
         }
         ?>
     </main>
-
+<footer class="fixed-bottom text-center">
+      Site créé par Ancelet Paul, El Baied Sami, Guitton Georges, Lécuyer Alexis et Oubenami Nour-Eddine.
+  	</footer>
 </body>
-<footer class="page-footer font-small fixed-bottom">
-    <div class="text-center py-3">
-        <span id="footer">Site créé par Ancelet Paul, El Baied Sami, Guitton Georges, Lécuyer Alexis et Oubenami
-            Nour-Eddine.</span>
-    </div>
-</footer>
 </html>
