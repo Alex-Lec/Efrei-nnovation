@@ -113,7 +113,7 @@
                         </div>
                         <div class="col-md-2 align-middle">
                             <div class="card-body"> 
-                                <form method="post" action="../Vues/formulaire_innovation.php">
+                                <form method="post" action="../Vues/modification_innovation.php">
                                     <input type="hidden" name="numInnovationSelect" value="<?php echo $idInnovation;?>">
                                     <input type="hidden" name="titre" value="<?php echo $titre;?>">
                                     <input type="hidden" name="descriptionCourte" value="<?php echo $descriptionCourte;?>">
