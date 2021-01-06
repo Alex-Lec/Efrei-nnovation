@@ -57,31 +57,21 @@
       </div>
     </nav>
 		</header>
-		<div class="text-center">
-			<?php
-      $titre=$_POST["titre"];
-      $descriptionCourte=$_POST["descriptionCourte"];
-      $descriptionLongue=$_POST["descriptionLongue"];
-			echo $titre;
-      echo $descriptionCourte;
-      echo $descriptionLongue;
-			?>
-		</div>
 			
     <main class="container form-innovation mb-5"> 
 		  <h2 class="text-center">Création d'une innovation</h2>
 			<form method="post" action="../controleurs/creation_innovation.php">
 				<div class="form-group">
 					<label for="titre">Titre de l'innovation :</label>
-					<input type="text" name="titre" id="titre" class="form-control" value="<?php $titre ?>" required/>
+					<input type="text" name="titre" id="titre" class="form-control" value="" required/>
 				</div>
 				<div class="form-group">
 					<label for="titre">Description courte de l'innovation :</label>
-					<textarea class="form-control" name="descriptionCourte" id="descriptionCourte" rows=2 placeholder="Entrez ici la description courte de votre innovation" value="<?php $descriptionCourte ?>" required></textarea>
+					<textarea class="form-control" name="descriptionCourte" id="descriptionCourte" rows=2 placeholder="Entrez ici la description courte de votre innovation" value="" required></textarea>
 				</div>
 				<div class="form-group">
-					<label for="titre">Description courte de l'innovation :</label>
-					<textarea class="form-control" name="descriptionLongue" id="descriptionLongue" rows=6 placeholder="Entrez ici la description longue de votre innovation" value="<?php $descriptionLongue ?>" required></textarea>
+					<label for="titre">Description longue de l'innovation :</label>
+					<textarea class="form-control" name="descriptionLongue" id="descriptionLongue" rows=6 placeholder="Entrez ici la description longue de votre innovation" value="" required></textarea>
 				</div>
 				<div class="form-group">
 					<input type="submit" class="btn btn-outline-primary form-control" value="Soumettre l'innovation" class="text-center"/>

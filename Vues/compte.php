@@ -118,6 +118,7 @@
                                     <input type="hidden" name="titre" value="<?php echo $titre;?>">
                                     <input type="hidden" name="descriptionCourte" value="<?php echo $descriptionCourte;?>">
                                     <input type="hidden" name="descriptionLongue" value="<?php echo $descriptionLongue;?>">
+                                    <input type="hidden" name="fini" value="<?php echo $fini;?>">
                                     <input type="submit" class="btn btn-primary" value="Modifier">
                                 </form>
                                 <p class="card-text mt-2"><?php if($fini==0){echo 'Projet en cours !';}else{echo 'Projet fini !';} ?></p>

@@ -59,12 +59,14 @@
 		</header>
 		<div class="text-center">
 			<?php
-      $titre=$_POST["titre"];
-      $descriptionCourte=$_POST["descriptionCourte"];
-      $descriptionLongue=$_POST["descriptionLongue"];
-			echo $titre;
-      echo $descriptionCourte;
-      echo $descriptionLongue;
+                $titre=$_POST["titre"];
+                $descriptionCourte=$_POST["descriptionCourte"];
+                $descriptionLongue=$_POST["descriptionLongue"];
+                $fini=$_POST["fini"];
+                echo $titre;
+                echo $descriptionCourte;
+                echo $descriptionLongue;
+                echo $fini;
 			?>
 		</div>
 			
@@ -80,8 +82,12 @@
 					<textarea class="form-control" name="descriptionCourte" id="descriptionCourte" rows=2 placeholder="Entrez ici la description courte de votre innovation" value="<?php $descriptionCourte ?>" required></textarea>
 				</div>
 				<div class="form-group">
-					<label for="titre">Description courte de l'innovation :</label>
+					<label for="titre">Description longue de l'innovation :</label>
 					<textarea class="form-control" name="descriptionLongue" id="descriptionLongue" rows=6 placeholder="Entrez ici la description longue de votre innovation" value="<?php $descriptionLongue ?>" required></textarea>
+				</div>
+                <div class="form-group">
+					<label for="fini">Cochez la case si vous avez fini le projet :</label>
+                    <input type="checkbox" name="fini" id="fini" class="form-control" value="" />
 				</div>
 				<div class="form-group">
 					<input type="submit" class="btn btn-outline-primary form-control" value="Soumettre l'innovation" class="text-center"/>
