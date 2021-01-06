@@ -73,6 +73,10 @@
 					<label for="titre">Description longue de l'innovation :</label>
 					<textarea class="form-control" name="descriptionLongue" id="descriptionLongue" rows=6 placeholder="Entrez ici la description longue de votre innovation" value="" required></textarea>
 				</div>
+        <div class="form-group">
+					<label for="image">Entrez le lien de l'image :</label>
+					<input type="text" name="image" id="image" class="form-control" value="" required/>
+				</div>
 				<div class="form-group">
 					<input type="submit" class="btn btn-outline-primary form-control" value="Soumettre l'innovation" class="text-center"/>
 				</div>

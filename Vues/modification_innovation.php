@@ -59,10 +59,13 @@
 		</header>
 		<div class="text-center">
 			<?php
+                $idInnovation=$_POST["numInnovationSelect"];
                 $titre=$_POST["titre"];
+                $image=$_POST["image"];
                 $descriptionCourte=$_POST["descriptionCourte"];
                 $descriptionLongue=$_POST["descriptionLongue"];
                 $fini=$_POST["fini"];
+                echo $idInnovation;
                 echo $titre;
                 echo $descriptionCourte;
                 echo $descriptionLongue;
@@ -72,22 +75,27 @@
 			
     <main class="container form-innovation mb-5"> 
 		  <h2 class="text-center">Création d'une innovation</h2>
-			<form method="post" action="../controleurs/creation_innovation.php">
+			<form method="post" action="../controleurs/update_innovation.php">
+        <input type="hidden" name="idInnovation" value="<?php echo $idInnovation;?>">
 				<div class="form-group">
 					<label for="titre">Titre de l'innovation :</label>
-					<input type="text" name="titre" id="titre" class="form-control" value="<?php $titre ?>" required/>
+					<input type="text" name="titre" id="titre" class="form-control" value="<?php echo $titre ?>" required/>
 				</div>
 				<div class="form-group">
 					<label for="titre">Description courte de l'innovation :</label>
-					<textarea class="form-control" name="descriptionCourte" id="descriptionCourte" rows=2 placeholder="Entrez ici la description courte de votre innovation" value="<?php $descriptionCourte ?>" required></textarea>
+					<textarea class="form-control" name="descriptionCourte" id="descriptionCourte" rows=2 value="" required><?php echo $descriptionCourte ?></textarea>
 				</div>
 				<div class="form-group">
 					<label for="titre">Description longue de l'innovation :</label>
-					<textarea class="form-control" name="descriptionLongue" id="descriptionLongue" rows=6 placeholder="Entrez ici la description longue de votre innovation" value="<?php $descriptionLongue ?>" required></textarea>
+					<textarea class="form-control" name="descriptionLongue" id="descriptionLongue" rows=6 value="" required><?php echo $descriptionLongue ?></textarea>
 				</div>
-                <div class="form-group">
+        <div class="form-group">
+					<label for="image">Entrez le lien de l'image :</label>
+					<input type="text" name="image" id="image" class="form-control" value="<?php echo $image ?>" required/>
+				</div>
+        <div class="form-group">
 					<label for="fini">Cochez la case si vous avez fini le projet :</label>
-                    <input type="checkbox" name="fini" id="fini" class="form-control" value="" />
+          <input type="checkbox" name="fini" id="fini" class="form-control" value="" <?php if($fini == 1) {echo "checked";}?>/>
 				</div>
 				<div class="form-group">
 					<input type="submit" class="btn btn-outline-primary form-control" value="Soumettre l'innovation" class="text-center"/>

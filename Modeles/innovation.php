@@ -26,4 +26,14 @@ public function __construct($co,$titre,$descriptionCourte,$descriptionLongue,$da
     $this->image=$image;
     $this->numUtilisateur=$numUtilisateurCo;
 }
+public static function modification($co,$numInnovation,$titre,$descriptionCourte,$descriptionLongue,$dateModification,$fini,$image)
+{       
+    mysqli_query($co,"UPDATE innovation SET titre='$titre', descriptionCourte='$descriptionCourte', descriptionLongue='$descriptionLongue', dateModification='$dateModification', fini='$fini', image='$image' WHERE idInnovation='$numInnovation'") or die("aled");
+    $this->titre=$titre;
+    $this->$descriptionCourte=$descriptionCourte;
+    $this->descriptionLongue=$descriptionLongue;
+    $this->dateModification=$dateModification;
+    $this->fini=$fini;
+    $this->image=$image;
+}
 }?> 

@@ -116,6 +116,7 @@
                                 <form method="post" action="../Vues/modification_innovation.php">
                                     <input type="hidden" name="numInnovationSelect" value="<?php echo $idInnovation;?>">
                                     <input type="hidden" name="titre" value="<?php echo $titre;?>">
+                                    <input type="hidden" name="image" value="<?php echo $image;?>">
                                     <input type="hidden" name="descriptionCourte" value="<?php echo $descriptionCourte;?>">
                                     <input type="hidden" name="descriptionLongue" value="<?php echo $descriptionLongue;?>">
                                     <input type="hidden" name="fini" value="<?php echo $fini;?>">
