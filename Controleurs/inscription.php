@@ -19,9 +19,7 @@
 
         if(mysqli_num_rows($result)!= null)
         { 
-            echo 'mail déjà utilisé';
-            sleep(3);
-            header('Location:../Vues/index.php');
+            header('Location:../Vues/mailutilise.php');
         }
         else
         {
