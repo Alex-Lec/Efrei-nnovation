@@ -3,7 +3,7 @@
     require_once("../modeles/bd.php");
     require_once("../modeles/utilisateur.php");
 
-    if (isset($_POST["login"]) && isset($_POST["mdp"]) && isset($_POST["nom"]) && isset($_POST["prenom"]) && isset($_POST["statut"]))
+    if(isset($_POST["login"]) && isset($_POST["mdp"]) && isset($_POST["nom"]) && isset($_POST["prenom"]) && isset($_POST["statut"]))
     {
         $login = $_POST["login"];
         $mdp = $_POST["mdp"];
@@ -17,13 +17,11 @@
         $result=mysqli_query($co,"SELECT login FROM utilisateur WHERE login='$login'")
         or die("Erreur requete connexion");
 
-        if(mysqli_num_rows($result)==1)
+        if(mysqli_num_rows($result)!= null)
         { 
-            ?>
-            <script>
-                alert("Ce mail est deja utilisé par un utilisateur");
-            </script>
-            <?php
+            echo 'mail déjà utilisé';
+            sleep(3);
+            header('Location:../Vues/index.php');
         }
         else
         {
@@ -33,10 +31,6 @@
             header('Location:../Vues/connexion.html');
         }
     } 
-    $coBd = new bd("efreinnovation");
-    $co = $coBd->connexion();
-    $m = new utilisateur($co,$login,$mdp,$nom,$prenom,$statut);
-    header('Location:../Vues/connexion.html');
 ?>
 
 

@@ -90,7 +90,7 @@
                 <div class="card mb-3">
                     <div class="row g-0">
                         <div class="col-md-5">
-                            <img src="<?php echo $image ?>" alt="Card img" class="card-img">
+                            <img src="<?php echo $image ?>" alt="Aucune image disponible" class="card-img">
                         </div>
                         <div class="col-md-5">
                             <div class="card-body"> 

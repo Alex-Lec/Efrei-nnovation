@@ -80,7 +80,7 @@
             ?>
             
                 <div class="card ml-2 mr-2" id="card-accueil">
-                    <img class="card-img-top" src="<?php echo $image ?>" alt="Card image cap">
+                    <img class="card-img-top" src="<?php echo $image ?>" alt="Aucune image disponible" >
                     <div class="card-body">
                         <h5 class="card-title"><?php echo $titre ?></h5>
                         <p class="card-text"><?php echo $descriptionCourte ?></p>

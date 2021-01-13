@@ -90,7 +90,7 @@
       <div class="text-center">
         <h1><?php echo $titre;?></h1>
         <p>Créée par : <?php echo $prenom; echo ' ';echo $nom; ?></p>
-        <img src=<?php echo $image;?> class="img-innov">
+        <img src=<?php echo $image;?> class="img-innov" alt="Aucune image disponible">
         <p><?php echo $descriptionCourte;?></p>
         <p><?php echo $descriptionLongue;?></p>
         <p>Modifié pour la dernière fois le : <?php echo $dateModification;?></p>
@@ -126,14 +126,19 @@
         $numCommentaire=$donnees["idCommentaire"];
         $txtCommentaire=$donnees["texte"];
         $date=$donnees["date"];
+        $createur=$donnees["createur"];
 
         $result4=mysqli_query($co,"SELECT nom,prenom FROM commentaire,utilisateur WHERE commentaire.createur=utilisateur.numUtilisateur AND innovation='$numInnovation' AND idCommentaire='$numCommentaire'") or die("Erreur requete 11");
-
+        while($donnees2 = mysqli_fetch_assoc($result4))
+        {
+            $nom2=$donnees2["nom"];
+            $prenom2=$donnees2["prenom"];
+        }
         ?>
         <div class="card-deck" id="innovations">
             <div class="card mb-4">
                 <div class="card-body">
-                    <h5 class="card-title"><?php echo $prenom ,"  ",$nom; ?></h5>
+                    <h5 class="card-title"><?php echo $prenom2 ,"  ",$nom2; ?></h5>
                     <p class="card-text"><?php echo $txtCommentaire ?></p>
                     <p class="card-text"><?php echo $date ?></p>
                 </div>
